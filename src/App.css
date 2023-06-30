@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fa99ff;
+  background-image: radial-gradient(
+      at 53% 66%,
+      hsla(356, 65%, 67%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 75% 75%, hsla(198, 90%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 30% 34%, hsla(224, 96%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 65% 22%, hsla(248, 64%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 16%, hsla(27, 61%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 1%, hsla(181, 82%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 68% 26%, hsla(210, 96%, 75%, 1) 0px, transparent 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.piano-board {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  gap: 1px;
+  position: relative;
+  min-width: 700px;
+  min-height: 350px;
+}
+
+.piano-board .key {
+  border-radius: 0 0 15px 15px;
+  background: #ffffff;
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
+  flex-basis: 100px;
+}
+
+.piano-board .key:first-of-type {
+  border-radius: 15px 0 15px 15px;
+}
+.piano-board .key:nth-of-type(7) {
+  border-radius: 0 15px 15px 15px;
+}
+
+.key.active {
+  background-color: #7c7c7c;
+  box-shadow: inset 20px 20px 60px #c6c6c6, inset -20px -20px 60px #7c7c7c;
+}
+
+/* .piano-board .key:hover {
+  background-color: #ddd;
+} */
+
+.piano-board .black-key {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 200px;
+  border-radius: 15px;
+  background: #252222;
+  box-shadow: inset 20px 20px 60px #1f1d1d, inset -20px -20px 60px #2b2727,
+    0 0 5px #2b2727;
+  color: #fff;
+}
+
+.black-key.active {
+  background-color: #878787;
+}
+
+.Db {
+  left: 58px;
+}
+.Eb {
+  left: 180px;
+}
+.Gb {
+  left: 360px;
+}
+.Ab {
+  left: 473px;
+}
+.Bb {
+  left: 586px;
+}
+
+/* .piano-board .black-key:hover {
+  background-color: #535353;
+} */
